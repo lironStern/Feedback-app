@@ -10,7 +10,11 @@ function RatingSelect({select}) {
 
 
     useEffect(() => {
+        if(editFeedbackState.edit === true)
         setSelected(editFeedbackState.item.rating);
+    else{
+        setSelected(10)
+    }
     }, [editFeedbackState])
 
 
